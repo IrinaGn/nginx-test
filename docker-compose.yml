@@ -13,11 +13,11 @@ services:
 
   nginxinc:
     image: nginxinc/nginx-unprivileged
+    ports:
+      - "8080:80"
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
-    ports:
-      - "8080:80"
     environment:
       - NGINX_PORT=80
 
