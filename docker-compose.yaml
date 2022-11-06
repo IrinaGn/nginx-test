@@ -7,7 +7,7 @@ services:
       - "80:80"
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
-      - ./nginx/default.conf:/etc/nginx/conf.b/default.conf
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
     environment:
       - NGINX_PORT=80
 
